@@ -20,7 +20,9 @@ const noteSchema = new mongoose.Schema({
 
 const Note =  mongoose.model("Note",noteSchema)
 
-
+app.get("/",(req,res)=>{
+    res.send("Maje maaro")
+})
 
 //////////////////////////////////////////////ROUTE TARGETTING ALL NOTES////////////////////////////////////////////////
 app.route("/notes")
