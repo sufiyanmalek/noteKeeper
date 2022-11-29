@@ -9,7 +9,7 @@ const dotenv = require("dotenv")
 const app = express()
 dotenv.config();
 app.use(express.urlencoded({extended:true}))
-mongoose.connect(process.env.MONGO_URL)//to connect mongoDB
+mongoose.connect('mongodb+srv://sufiyan:Test123@cluster0.ausddm3.mongodb.net/?retryWrites=true&w=majority')//to connect mongoDB
 app.use(cors())
 
 //notes schema
