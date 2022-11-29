@@ -90,10 +90,15 @@ app.route("/note/:id")
     Note.deleteOne({_id:id},(err) => {
         if(err){
             res.send(err)
-        }else{
-            res.send("Note has been Deleted Successfully")
         }
     })
+    Note.find(function(err,foundNotes){
+    if(err){
+        res.send(err);
+    }else{
+        res.send(foundNotes)
+    }
+  })
 });
 
 app.listen(process.env.PORT||3001,(req, res) => {
